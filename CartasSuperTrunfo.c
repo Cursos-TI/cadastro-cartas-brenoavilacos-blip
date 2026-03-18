@@ -11,5 +11,9 @@ int main() {
 
   // Área para exibição dos dados da cidade
 
+  printf("Vou iniciar a criacao do jogo super trunfo de cidades usando linguagem C!\n");
+  printf("Me desejem sorte!\n");
+  
+
 return 0;
 } 
