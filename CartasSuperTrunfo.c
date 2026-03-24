@@ -10,13 +10,13 @@ int main() {
 
   char estado1, codigo1[4], cidade1[30];
   unsigned long int populacao1;
-  float area1, pib1, super_poder1, densidade1, pibpercapta1;
+  float area1, pib1, super_poder1, densidade1, pibpercapta1, inverso_densidade1;
   int pontos1;
   
   char estado2, codigo2[4], cidade2[30];
   unsigned long int populacao2;
+  float area2, pib2, super_poder2, densidade2, pibpercapta2, inverso_densidade2;
   int pontos2;
-  float area2, pib2, super_poder2,densidade2, pibpercapta2;
   
 
   
@@ -32,13 +32,13 @@ int main() {
   scanf(" %c", &estado1 );
 
   printf("Digite o código identificador da primeira cidade(Exemplo: A01, B02, C03):\n");
-  scanf(" %4s", &codigo1);
+  scanf(" %4c", &codigo1);
 
   printf("Digite o nome da primeira cidade:\n");
   scanf("%s", cidade1);
 
   printf("Digite a população da primeira cidade:\n");
-  scanf("%ul", &populacao1);
+  scanf(" %ul", &populacao1);
 
   printf("Digite a área, em quilômetros quadrados, da primeira cidade:\n");
   scanf("%f", &area1);
@@ -54,18 +54,18 @@ int main() {
   scanf(" %c", &estado2 );
 
   printf("Digite o código identificador da segunda cidade(Exemplo: A01, B02, C03):\n");
-  scanf(" %4s", &codigo2);
+  scanf(" %4c", &codigo2);
 
   printf("Digite o nome da segunda cidade:\n");
   scanf("%s", cidade2);
 
   printf("Digite a população da segunda cidade:\n");
-  scanf("%ul", &populacao2);
+  scanf(" %ul", &populacao2);
 
   printf("Digite a área, em quilômetros quadrados, da segunda cidade:\n");
   scanf("%f", &area2);
 
-  prinf("Digite o PIB da segunda cidade:\n");
+  printf("Digite o PIB da segunda cidade:\n");
   scanf("%f", &pib2);
 
   printf("Digite o numero de pontos turísticos da segunda cidade:\n");
@@ -83,28 +83,31 @@ int main() {
     pibpercapta1 = pib1 / populacao1;
     pibpercapta2 = pib2 / populacao2;
 
-    super_poder1 = (float) populacao1 + area1 + pib1 + pontos1 +  pibpercapta1 + densidade1;
-    super_poder2 = (float) populacao2 + area2 + pib2 + pontos2 +  pibpercapta2 + densidade2;
+    inverso_densidade1 = 1.0 / densidade1;
+    inverso_densidade2 = 1.0 / densidade2;
+
+    super_poder1 = (float) populacao1 + (float)area1 + (float)pib1 + (float)pontos1 +  (float)pibpercapta1 + (float)densidade1, (float)inverso_densidade1;
+    super_poder2 = (float) populacao2 + (float)area2 + (float)pib2 + (float)pontos2 +  (float)pibpercapta2 + (float)densidade2 + (float)inverso_densidade2;
 
     printf("Carta 1");
     printf("Estado: %c", estado1);
     printf("Código: %s", codigo1);
     printf("Nome da Cidade: %s", cidade1);
     printf("Polulação %ul", populacao1);
-    printf("Área %f:", area1);
-    printf("PIB %f:", pib1);
+    printf("Área %.2f:", area1);
+    printf("PIB %.2f:", pib1);
     printf("Número de Pontos Turísticos %d:", pontos1);
-    printf("O Super Poder é: ");
+    printf("O Super Poder é: %.2f", super_poder1);
 
     printf("Carta 2");
     printf("Estado: %c", estado2);
     printf("Código: %s", codigo2);
     printf("Nome da Cidade: %s", cidade2);
     printf("Polulação %ul", populacao2);
-    printf("Área %f:", area2);
-    printf("PIB %f:", pib2);
+    printf("Área %.2f:", area2);
+    printf("PIB %.2f:", pib2);
     printf("Número de Pontos Turísticos %d:", pontos2);
-
+    printf("O Super Poder é: %.2f", super_poder2);  
 
 
 
