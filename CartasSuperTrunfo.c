@@ -32,7 +32,7 @@ int main() {
   scanf(" %c", &estado1 );
 
   printf("Digite o código identificador da primeira cidade(Exemplo: A01, B02, C03):\n");
-  scanf("%4s", &codigo1);
+  scanf(" %4s", &codigo1);
 
   printf("Digite o nome da primeira cidade:\n");
   scanf("%s", cidade1);
