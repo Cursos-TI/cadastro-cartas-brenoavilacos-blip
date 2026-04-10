@@ -144,6 +144,48 @@ int main() {
   printf("PIB per capta: Carta 2 venceu: %d\n", pibpercapta2 > pibpercapta1);
   printf("Super poder: Carta 2 venceu %d\n\n", super_poder2 > super_poder1);
   
+  // Área para implantação do código para comparação dos atributor de uma carta usando estruturas condicionais compostas
 
+  if (populacao1 > populacao2){
+    printf("Populacação: A carta 1 venceu.\n");
+  }else{
+    printf("Populacação: A carta 2 venceu.\n");  
+  }
+
+  if (area1 > area2){
+    printf("Área: A carta1 venceu.\n");  
+  }else{
+    printf("Área: A carta 2 venceu.\n");
+  }
+
+  if (pib1 > pib2){
+    printf("PIB: A carta 1 venceu.\n");
+  }else{
+    printf("PIB: A carta 2 venceu.\n");
+  }
+
+  if (pontos1 > pontos2){
+    printf("Pontos Turísticos: A carta 1 venceu.\n");
+  }else{
+    printf("Pontos Turísticos: A carta 2 venceu.\n");
+  }
+
+  if (densidade1 < densidade2){
+    printf("Densidade populacional: A carta 1 venceu.\n");
+  }else{
+    printf("Densidade populacional:  A carta 2 venceu.\n");
+  }
+   
+  if (pibpercapta1 > pibpercapta2){
+    printf("PIB per capta: A carta 1 venceu.\n");
+  }else{
+    printf("PIB per capta: A carta 2 venceu.\n");
+  }
+
+  if (super_poder1 > super_poder2){
+    printf("Super poder: A carta 1 venceu.\n");
+  }else{
+    printf("Super poder: A carta 2 venceu.\n");
+  }
   return 0;
 } 
